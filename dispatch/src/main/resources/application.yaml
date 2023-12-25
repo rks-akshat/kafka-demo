@@ -1,0 +1,4 @@
+spring:
+  kafka:
+    bootstrap-server: "localhost:9092"
+    value-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
