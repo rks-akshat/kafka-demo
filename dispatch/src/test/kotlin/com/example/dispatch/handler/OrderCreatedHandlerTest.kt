@@ -1,11 +1,12 @@
-package com.example.dispatch.order
+package com.example.dispatch.handler
 
+import com.example.dispatch.message.OrderCreated
 import com.example.dispatch.service.DispatchService
 import org.junit.jupiter.api.BeforeEach
 
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.*
-import org.springframework.beans.factory.annotation.Autowired
+import java.util.*
 
 internal class OrderCreatedHandlerTest {
 
@@ -20,7 +21,8 @@ internal class OrderCreatedHandlerTest {
 
     @Test
     fun listen() {
-        orderCreatedHandler.listen("payload")
-        verify(dispatchServiceMock, times(1)).process("payload")
+        val message = OrderCreated(UUID.randomUUID(), "payload")
+        orderCreatedHandler.listen(message)
+        verify(dispatchServiceMock, times(1)).process(message)
     }
 }

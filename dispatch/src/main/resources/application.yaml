@@ -1,4 +1,11 @@
 spring:
   kafka:
     bootstrap-server: "localhost:9092"
-    value-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+    consumer:
+      value-deserializer: "org.springframework.kafka.support.serializer.JsonDeserializer"
+      properties:
+        spring:
+          json:
+            value:
+              default:
+                type: "com.example.dispatch.message.OrderCreated"

@@ -1,5 +1,6 @@
-package com.example.dispatch.order
+package com.example.dispatch.handler
 
+import com.example.dispatch.message.OrderCreated
 import com.example.dispatch.service.DispatchService
 import org.slf4j.LoggerFactory
 import org.springframework.kafka.annotation.KafkaListener
@@ -17,8 +18,8 @@ class OrderCreatedHandler (
         topics = ["order.created"],
         groupId = "dispatch.order.created.consumer"
     )
-    fun listen(payload: String) {
-        logger.info("Received message: payload = $payload")
+    fun listen(payload: OrderCreated) {
+        logger.info("Received message: payload = id:${payload.id} payload:${payload.payload}")
         dispatchService.process(payload)
     }
 
