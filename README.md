@@ -1,0 +1,1 @@
+Mock project built by following: https://deloittedevelopment.udemy.com/course/introduction-to-kafka-with-spring-boot/
