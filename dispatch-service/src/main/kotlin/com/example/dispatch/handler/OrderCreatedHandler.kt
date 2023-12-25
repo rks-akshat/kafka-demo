@@ -16,7 +16,8 @@ class OrderCreatedHandler (
     @KafkaListener(
         id = "orderConsumerClient",
         topics = ["order.created"],
-        groupId = "dispatch.order.created.consumer"
+        groupId = "dispatch.order.created.consumer",
+        containerFactory = "kafkaListenerContainerFactory"
     )
     fun listen(payload: OrderCreated) {
         logger.info("Received message: payload = id:${payload.id} payload:${payload.payload}")
