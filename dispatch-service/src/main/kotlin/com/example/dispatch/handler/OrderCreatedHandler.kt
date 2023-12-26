@@ -21,7 +21,11 @@ class OrderCreatedHandler (
     )
     fun listen(payload: OrderCreated) {
         logger.info("Received message: payload = id:${payload.id} payload:${payload.payload}")
-        dispatchService.process(payload)
+        try {
+            dispatchService.process(payload)
+        } catch (e: Exception) {
+            logger.error("Error processing payload id = ${payload.id}", e)
+        }
     }
 
 }

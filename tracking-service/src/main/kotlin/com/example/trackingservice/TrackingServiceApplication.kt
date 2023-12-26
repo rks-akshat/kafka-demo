@@ -1,12 +1,11 @@
-package com.example.dispatch
+package com.example.trackingservice
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import org.springframework.context.annotation.ComponentScan
 
 @SpringBootApplication
-class DispatchApplication
+class TrackingServiceApplication
 
 fun main(args: Array<String>) {
-	runApplication<DispatchApplication>(*args)
+	runApplication<TrackingServiceApplication>(*args)
 }
