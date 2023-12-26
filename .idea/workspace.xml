@@ -5,30 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd5e0726-1e09-450c-b504-f7fc776eb4f8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kafka demo app 2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/message/OrderDispatched.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracking-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracking-service/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracking-service/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracking-service/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracking-service/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracking-service/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracking-service/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/TrackingServiceApplication.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracking-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tracking-service/src/test/kotlin/com/example/trackingservice/TrackingServiceApplicationTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/DispatchApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/DispatchApplication.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/TrackingConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/handler/OrderDispatchedHandler.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/message/OrderDispatched.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/message/TrackingStatusUpdate.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/service/OrderTrackingService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/util/NoArgConstructor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/DispatchConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/DispatchConfig.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/handler/OrderCreatedHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/handler/OrderCreatedHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/service/DispatchService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/service/DispatchService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/test/kotlin/com/example/dispatch/handler/OrderCreatedHandlerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/test/kotlin/com/example/dispatch/handler/OrderCreatedHandlerTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/test/kotlin/com/example/dispatch/service/DispatchServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/test/kotlin/com/example/dispatch/service/DispatchServiceTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracking-service/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracking-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,14 +35,60 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/dispatch-service">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/tracking-service">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="dispatch" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="dispatch" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="dispatch" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tracking-service" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tracking-service" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tracking-service" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Annotation" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,9 +110,71 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/akshat/Desktop/kafka demo app 2"
+    "last_opened_file_path": "C:/Users/akshat/Desktop/kafka demo app 2",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.trackingservice.message" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.trackingservice.handler" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.tracking-service [bootRun]">
+    <configuration name="dispatch-service [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/dispatch-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="tracking-service [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/tracking-service" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.tracking-service [bootRun]" />
+        <item itemvalue="Gradle.dispatch-service [bootRun]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
