@@ -1,6 +1,6 @@
 package com.example.trackingservice.handler
 
-import com.example.trackingservice.message.OrderDispatched
+import com.example.trackingservice.message.DispatchPreparing
 import com.example.trackingservice.service.OrderTrackingService
 import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.stereotype.Component
@@ -12,12 +12,12 @@ class OrderDispatchedHandler(
 
     @KafkaListener(
         id = "orderDispatchedClient",
-        topics = ["order.dispatched"],
-        groupId = "dispatch.order.dispatched.consumer",
+        topics = ["dispatch.tracking"],
+        groupId = "dispatch.dispatch.tracking.consumer",
         containerFactory = "kafkaListenerContainerFactory"
     )
-    fun handleOrderDispatch(orderDispatched: OrderDispatched) {
-        orderTrackingService.process(orderDispatched)
+    fun handleOrderDispatch(dispatchPreparing: DispatchPreparing) {
+        orderTrackingService.process(dispatchPreparing)
     }
 
 }

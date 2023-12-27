@@ -4,6 +4,6 @@ import com.example.trackingservice.util.NoArgConstructor
 import java.util.UUID
 
 @NoArgConstructor
-class OrderDispatched (
+class DispatchPreparing (
     val orderId: UUID
 )

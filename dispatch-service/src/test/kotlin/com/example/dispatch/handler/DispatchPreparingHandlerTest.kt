@@ -6,24 +6,23 @@ import org.junit.jupiter.api.BeforeEach
 
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.*
-import java.lang.RuntimeException
 import java.util.*
 
-internal class OrderCreatedHandlerTest {
+internal class DispatchPreparingHandlerTest {
 
     private lateinit var dispatchServiceMock: DispatchService
-    private lateinit var orderCreatedHandler: OrderCreatedHandler
+    private lateinit var dispatchPreparingHandler: DispatchPreparingHandler
 
     @BeforeEach
     fun setUp() {
         dispatchServiceMock = mock(DispatchService::class.java)
-        orderCreatedHandler = OrderCreatedHandler(dispatchServiceMock)
+        dispatchPreparingHandler = DispatchPreparingHandler(dispatchServiceMock)
     }
 
     @Test
     fun `can listen to order created events successfully`() {
         val message = OrderCreated(UUID.randomUUID(), "payload")
-        orderCreatedHandler.listen(message)
+        dispatchPreparingHandler.listen(message)
         verify(dispatchServiceMock, times(1)).process(message)
     }
 

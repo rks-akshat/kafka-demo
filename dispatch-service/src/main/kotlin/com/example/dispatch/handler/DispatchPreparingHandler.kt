@@ -7,7 +7,7 @@ import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.stereotype.Component
 
 @Component
-class OrderCreatedHandler (
+class DispatchPreparingHandler (
     private val dispatchService: DispatchService,
 ){
 

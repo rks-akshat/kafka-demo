@@ -1,6 +1,6 @@
 package com.example.trackingservice
 
-import com.example.trackingservice.message.OrderDispatched
+import com.example.trackingservice.message.DispatchPreparing
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.clients.producer.ProducerConfig
 import org.apache.kafka.common.serialization.StringDeserializer
@@ -33,7 +33,7 @@ class TrackingConfig (
 
             ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG to ErrorHandlingDeserializer::class.java,
             ErrorHandlingDeserializer.VALUE_DESERIALIZER_CLASS to JsonDeserializer::class.java,
-            JsonDeserializer.VALUE_DEFAULT_TYPE to OrderDispatched::class.qualifiedName,
+            JsonDeserializer.VALUE_DEFAULT_TYPE to DispatchPreparing::class.qualifiedName,
             ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG to StringDeserializer::class.java,
         )
         return DefaultKafkaConsumerFactory(config)

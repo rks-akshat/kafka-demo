@@ -1,13 +1,10 @@
 package com.example.dispatch.service
 
 import com.example.dispatch.message.OrderCreated
-import com.example.dispatch.message.OrderDispatched
-import org.junit.jupiter.api.Assertions.*
+import com.example.dispatch.message.DispatchPreparing
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.mockito.Mockito.*
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.kafka.core.KafkaTemplate
 import java.util.*
 import java.util.concurrent.CompletableFuture
@@ -21,7 +18,7 @@ internal class DispatchServiceTest {
     @BeforeEach
     fun setUp() {
         kafkaTemplate = mock()
-        dispatchService = DispatchService(kafkaTemplate, "order.dispatched") // why doesn't the @Value annotation work with the test?
+        dispatchService = DispatchService(kafkaTemplate, "dispatch.tracking") // why doesn't the @Value annotation work with the test?
     }
 
     @Test
@@ -29,6 +26,6 @@ internal class DispatchServiceTest {
         `when`(kafkaTemplate.send(anyString(), any(OrderCreated::class.java))).then { mock(CompletableFuture::class.java) }
         val message = OrderCreated(UUID.randomUUID(), "payload")
         dispatchService.process(message)
-        verify(kafkaTemplate, times(1)).send(eq("order.dispatched"), any(OrderDispatched::class.java))
+        verify(kafkaTemplate, times(1)).send(eq("dispatch.tracking"), any(DispatchPreparing::class.java))
     }
 }

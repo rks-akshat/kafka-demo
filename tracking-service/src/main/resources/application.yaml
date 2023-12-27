@@ -1,4 +1,4 @@
 kafka:
   bootstrap-server: "localhost:9092"
-  dispatch-topic: "order.dispatched"
+  dispatch-topic: "dispatch.tracking"
   tracking-topic: "tracking.status"

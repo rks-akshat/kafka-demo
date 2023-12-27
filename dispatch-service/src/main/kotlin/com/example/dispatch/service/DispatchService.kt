@@ -1,7 +1,7 @@
 package com.example.dispatch.service
 
 import com.example.dispatch.message.OrderCreated
-import com.example.dispatch.message.OrderDispatched
+import com.example.dispatch.message.DispatchPreparing
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.kafka.core.KafkaTemplate
@@ -11,7 +11,7 @@ import java.util.*
 @Service
 class DispatchService(
     private val kafkaTemplate: KafkaTemplate<String, Any>,
-    @Value("\${kafka.dispatch-topic:order.dispatched}") private val topicName: String
+    @Value("\${kafka.dispatch-topic:dispatch.tracking}") private val topicName: String
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
@@ -19,7 +19,7 @@ class DispatchService(
     fun process(payload: OrderCreated) {
         kafkaTemplate.send(
             topicName,
-            OrderDispatched(payload.id),
+            DispatchPreparing(payload.id),
         )
         logger.info("Order dispatched message sent id = ${payload.id}")
     }

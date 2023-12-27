@@ -4,6 +4,6 @@ import com.example.dispatch.util.NoArgConstructor
 import java.util.UUID
 
 @NoArgConstructor
-class OrderDispatched (
+class DispatchPreparing (
     val orderId: UUID
 )
