@@ -1,5 +1,6 @@
 package com.example.trackingservice.handler
 
+import com.example.dispatch.message.DispatchCompleted
 import com.example.dispatch.message.DispatchPreparing
 import com.example.trackingservice.service.OrderTrackingService
 import org.slf4j.LoggerFactory
@@ -24,13 +25,22 @@ class OrderDispatchedHandler(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     @KafkaHandler
-    fun handleOrderDispatch(
+    fun handleDispatchPreparing(
         @Header(KafkaHeaders.RECEIVED_KEY) key: String,
         @Header(KafkaHeaders.RECEIVED_PARTITION) partition: String,
         @Payload dispatchPreparing: DispatchPreparing,
     ) {
         logger.info("Received message: key = $key, partition = $partition, payload = $dispatchPreparing")
         orderTrackingService.process(key, dispatchPreparing)
+    }
+
+    @KafkaHandler
+    fun handleDispatchCompleted(
+        @Header(KafkaHeaders.RECEIVED_KEY) key: String, @Header(KafkaHeaders.RECEIVED_PARTITION) partition: String,
+        @Payload dispatchCompleted: DispatchCompleted
+    ) {
+        logger.info("Received message: key = $key, partition = $partition, payload = $dispatchCompleted")
+        orderTrackingService.process(key, dispatchCompleted)
     }
 
 }

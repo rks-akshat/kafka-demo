@@ -1,5 +1,6 @@
 package com.example.dispatch.service
 
+import com.example.dispatch.message.DispatchCompleted
 import com.example.dispatch.message.OrderCreated
 import com.example.dispatch.message.DispatchPreparing
 import org.slf4j.LoggerFactory
@@ -22,7 +23,13 @@ class DispatchService(
             key,
             DispatchPreparing(payload.id),
         )
-        logger.info("Order dispatched message sent id = ${payload.id}")
+        logger.info("Order dispatch preparing message sent id = ${payload.id}")
+        kafkaTemplate.send(
+            topicName,
+            key,
+            DispatchCompleted(payload.id),
+        )
+        logger.info("Order dispatch completed message sent id = ${payload.id}")
     }
 
 }

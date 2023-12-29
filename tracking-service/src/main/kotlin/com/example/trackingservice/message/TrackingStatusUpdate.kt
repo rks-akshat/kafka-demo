@@ -8,7 +8,7 @@ class TrackingStatusUpdate (
 ) {
 
     enum class TrackingStatus {
-        PROCESSING, DISPATCHED, RECEIVED
+        PROCESSING, DISPATCHED, COMPLETED
     }
 
 }
