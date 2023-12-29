@@ -6,17 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fd5e0726-1e09-450c-b504-f7fc776eb4f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/handler/OrderCreatedHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/handler/DispatchPreparingHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/message/OrderDispatched.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/message/DispatchPreparing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/handler/DispatchPreparingHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/handler/DispatchPreparingHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/service/DispatchService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/service/DispatchService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/test/kotlin/com/example/dispatch/handler/OrderCreatedHandlerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/test/kotlin/com/example/dispatch/handler/DispatchPreparingHandlerTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/test/kotlin/com/example/dispatch/service/DispatchServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/test/kotlin/com/example/dispatch/service/DispatchServiceTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/TrackingConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/TrackingConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/handler/OrderDispatchedHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/handler/OrderDispatchedHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/message/OrderDispatched.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/message/DispatchPreparing.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/service/OrderTrackingService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/service/OrderTrackingService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracking-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,17 +101,17 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/akshat/Desktop/kafka demo app 2",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/akshat/Desktop/kafka demo app 2&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.example.trackingservice.message" />
@@ -127,7 +120,7 @@
       <recent name="com.example.trackingservice.handler" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.dispatch-service [bootRun]">
+  <component name="RunManager" selected="Gradle.tracking-service [bootRun]">
     <configuration name="dispatch-service [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

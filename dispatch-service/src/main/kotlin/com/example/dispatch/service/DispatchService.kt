@@ -16,9 +16,10 @@ class DispatchService(
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
-    fun process(payload: OrderCreated) {
+    fun process(key: String, payload: OrderCreated) {
         kafkaTemplate.send(
             topicName,
+            key,
             DispatchPreparing(payload.id),
         )
         logger.info("Order dispatched message sent id = ${payload.id}")

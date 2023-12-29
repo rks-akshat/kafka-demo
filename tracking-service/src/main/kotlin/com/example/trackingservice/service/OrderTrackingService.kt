@@ -16,9 +16,10 @@ class OrderTrackingService (
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
-    fun process(dispatchPreparing: DispatchPreparing) {
+    fun process(key: String, dispatchPreparing: DispatchPreparing) {
         kafkaTemplate.send(
             trackingTopic,
+            key,
             TrackingStatusUpdate(dispatchPreparing.orderId, TrackingStatusUpdate.TrackingStatus.PROCESSING)
         )
         logger.info("Processed order dispatched event : id = ${dispatchPreparing.orderId}")
