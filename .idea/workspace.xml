@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fd5e0726-1e09-450c-b504-f7fc776eb4f8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/handler/DispatchPreparingHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/handler/DispatchPreparingHandler.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/service/DispatchService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/service/DispatchService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/DispatchConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dispatch-service/src/main/kotlin/com/example/dispatch/DispatchConfig.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/TrackingConfig.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/TrackingConfig.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/handler/OrderDispatchedHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/handler/OrderDispatchedHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/message/DispatchPreparing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/dispatch/message/DispatchPreparing.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/service/OrderTrackingService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/tracking-service/src/main/kotlin/com/example/trackingservice/service/OrderTrackingService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,6 +115,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.dispatch.message" />
       <recent name="com.example.trackingservice.message" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
@@ -165,8 +167,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.dispatch-service [bootRun]" />
         <item itemvalue="Gradle.tracking-service [bootRun]" />
+        <item itemvalue="Gradle.dispatch-service [bootRun]" />
       </list>
     </recent_temporary>
   </component>

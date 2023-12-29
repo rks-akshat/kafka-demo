@@ -1,6 +1,6 @@
 package com.example.trackingservice.service
 
-import com.example.trackingservice.message.DispatchPreparing
+import com.example.dispatch.message.DispatchPreparing
 import com.example.trackingservice.message.TrackingStatusUpdate
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value

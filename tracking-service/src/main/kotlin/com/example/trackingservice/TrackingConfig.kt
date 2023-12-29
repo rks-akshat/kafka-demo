@@ -1,6 +1,5 @@
 package com.example.trackingservice
 
-import com.example.trackingservice.message.DispatchPreparing
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.clients.producer.ProducerConfig
 import org.apache.kafka.common.serialization.StringDeserializer
@@ -13,6 +12,8 @@ import org.springframework.kafka.core.*
 import org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
 import org.springframework.kafka.support.serializer.JsonDeserializer
 import org.springframework.kafka.support.serializer.JsonSerializer
+
+private const val TRUSTED_PACKAGE = "com.example.dispatch.message"
 
 @Configuration
 class TrackingConfig (
@@ -33,7 +34,8 @@ class TrackingConfig (
 
             ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG to ErrorHandlingDeserializer::class.java,
             ErrorHandlingDeserializer.VALUE_DESERIALIZER_CLASS to JsonDeserializer::class.java,
-            JsonDeserializer.VALUE_DEFAULT_TYPE to DispatchPreparing::class.qualifiedName,
+            JsonDeserializer.TRUSTED_PACKAGES to TRUSTED_PACKAGE,
+
             ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG to StringDeserializer::class.java,
         )
         return DefaultKafkaConsumerFactory(config)
@@ -50,7 +52,6 @@ class TrackingConfig (
             ProducerConfig.BOOTSTRAP_SERVERS_CONFIG to bootstrapServer,
 
             ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG to JsonSerializer::class.java,
-            JsonSerializer.ADD_TYPE_INFO_HEADERS to false,
             ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG to StringSerializer::class.java,
         )
         return DefaultKafkaProducerFactory(config)
